@@ -7,3 +7,8 @@
 *{
     font-family: Outfit;
 }
+
+html, body {
+    overflow: auto; /* Ensure scrolling is enabled */
+    height: auto; /* Allow height to adjust */
+}
