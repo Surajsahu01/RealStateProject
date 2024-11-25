@@ -13,7 +13,7 @@ const Header = () => {
             max-w-3xl font-semibold pt-20'>Explore homes thet fit your dreams</h2>
             <div className=' space-x-6 mt-16'>
                 <a href="#Projects" className=' border border-white px-8 py-3 rounded'>Projects</a>
-                <a href="Contact" className=' border border-white px-8 py-3 rounded bg-blue-500'>Contact Us</a>
+                <a href="#Contact" className=' border border-white px-8 py-3 rounded bg-blue-500'>Contact Us</a>
             </div>
         </div>
         
