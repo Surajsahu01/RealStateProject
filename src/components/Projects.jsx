@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { assets, projectsData } from '../assets/assets'
+import { motion } from 'framer-motion';
 
 const Projects = () => {
     const[currentIndex, setCurrentIndex] = useState(0);
@@ -26,7 +27,13 @@ const Projects = () => {
         return () => window.removeEventListener('resize', updateCardsToShow);
     },[])
   return (
-    <div id='Projects' className=' container mx-auto py-4 pt-20 px-6 md:px-20 
+    <motion.div 
+    initial = {{opacity:0, x:150}}
+    transition={{duration:1}}
+    whileInView={{opacity:1, x:0}}
+    viewport={{once:false}}
+
+    id='Projects' className=' container mx-auto py-4 pt-20 px-6 md:px-20 
     lg:px-32 my-20 w-full overflow-hidden'>
         <h1 className=' text-4xl sm:text-4xl font-bold mb-2 text-center'>
             Projects 
@@ -35,8 +42,10 @@ const Projects = () => {
                 Crafting Spaces, Building Legacies-Explore Our Protfoliyo</p>
 
                 {/* ------Slide button------- */}
+                
+                
 
-                <div className='flex justify-end items-center mb-8'>
+            <   div className='flex justify-end items-center mb-8'>
                     <button onClick={prevProject}
                     className='p-3 bg-gray-200 rounded mr-2' aria-label='Previous Projects'>
                         <img src={assets.left_arrow} alt="Previous" />
@@ -73,8 +82,9 @@ const Projects = () => {
                         ))}
                     </div>
                 </div>
+            
         
-    </div>
+    </motion.div>
   )
 }
 
